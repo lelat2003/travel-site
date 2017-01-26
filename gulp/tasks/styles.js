@@ -6,7 +6,7 @@ nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
 mixins = require('postcss-mixins');
 
-gulp.task('styles', function() {
+/*gulp.task('styles', function() {
 	console.log("Imagine Sass or PostCSS running here.");
 	return gulp.src('./app/assets/styles/styles.css')
 	.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
@@ -15,4 +15,15 @@ gulp.task('styles', function() {
 		this.emit('end');
 	})
 	.pipe(gulp.dest('./app/temp/styles'));
+});*/
+
+gulp.task('styles', function() {
+	//console.log("Imagine Sass or PostCSS tasks running here.");
+    return gulp.src('./app/assets/styles/styles.css')
+    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
+    .on('error', function(errorInfo) {
+        console.log(errorInfo);
+        this.emit('end');
+    })
+    .pipe(gulp.dest('./app/temp/styles'));
 });

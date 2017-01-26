@@ -1,0 +1,69 @@
+body {
+	background-color: #f0f0f0;
+}
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+.row {
+	
+	border: 1px solid red;
+}
+.wrapper {
+	padding: 0.2rem;
+	max-width: 1200px;
+}
+
+.row__medium-6 {
+	width: 50%;
+	float: left;
+	
+}
+.row--gutters-large {
+	margin-right: -100px;
+}
+.row--gutters-large > div {
+	padding-right: 100px;
+}
+.section-title {
+	text-align: center;
+	font-size: 300;
+	color: Lightblue;
+}
+.section-title__icon {
+	margin-right: .5rem;
+}
+.feature-item {
+	position: relative;
+	padding-left: 94px;
+}
+
+.feature-item__icon {
+	position: absolute;
+	left: 0;
+}
+
+
+.clearfix {
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+}
+
+.row--gutters-large {
+	margin-right: -100px;
+}
+
+
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
